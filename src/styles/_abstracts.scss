@@ -16,7 +16,7 @@
 */
 @function ct_calculate-rem($size) {
 	$rem-default: 16;
-	$rem-size: $size / $rem-default;
+	$rem-size: calc($size / $rem-default);
 	@return #{$rem-size}rem;
 }
 
@@ -26,7 +26,7 @@
   $size = font size value in px
 */
 @function ct_calculate-lh($lh, $size) {
-	@return $lh / $size;
+	@return calc($lh / $size);
 }
 
 /*
@@ -36,7 +36,7 @@
 */
 @function ct_calculate-px($rem) {
 	$rem-default: 16;
-	$px-size: $rem * $rem-default;
+	$px-size: calc($rem * $rem-default);
 	@return #{$px-size}px;
 }
 
