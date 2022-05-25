@@ -1,0 +1,71 @@
+/* =====================================================================
+  -> FONTS
+===================================================================== */
+@font-face {
+	font-family: 'montserrat--medium';
+	font-display: swap;
+	src: url('../assets/fonts/montserrat--medium.woff2') format('woff2'),
+		url('../assets/fonts/montserrat--medium.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'montserrat--semibold';
+	font-display: swap;
+	src: url('../assets/fonts/montserrat--semibold.woff2') format('woff2'),
+		url('../assets/fonts/montserrat--semibold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'montserrat--bold';
+	font-display: swap;
+	src: url('../assets/fonts/montserrat--bold.woff2') format('woff2'),
+		url('../assets/fonts/montserrat--bold.woff') format('woff');
+}
+
+/* =====================================================================
+  -> GENERAL
+===================================================================== */
+body {
+	font-family: var(--font__primary);
+	font-size: ct_calculate-rem(18);
+	line-height: ct_calculate-lh(22, 18);
+}
+
+/* =====================================================================
+-> HEADINGS
+===================================================================== */
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+	@include ct_text-properties;
+}
+
+h1,
+.h1 {
+	font-family: var(--font__primary);
+	font-size: ct_calculate-rem(24);
+	line-height: ct_calculate-lh(30, 24);
+}
+
+h2,
+.h2 {
+	font-family: var(--font__headings);
+	font-size: ct_calculate-rem(48);
+	line-height: ct_calculate-lh(58, 48);
+}
+
+h3,
+.h3 {
+	font-family: var(--font__semibold);
+	font-size: ct_calculate-rem(36);
+	line-height: ct_calculate-lh(44, 36);
+}
+
+.h3--alt {
+	font-family: var(--font__bold);
+}
