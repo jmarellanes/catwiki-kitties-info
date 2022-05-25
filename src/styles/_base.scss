@@ -22,14 +22,6 @@ html {
 	font-size: 100%; // 1rem = 16px
 	font-weight: normal;
 	font-style: normal;
-
-	@include respond-to('medium--m') {
-		font-size: 90%;
-	}
-
-	@include respond-to('small--m') {
-		font-size: 86%;
-	}
 } //--> html
 
 /* =====================================================================
