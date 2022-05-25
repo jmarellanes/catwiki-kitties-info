@@ -1,3 +1,5 @@
+import './App.scss';
+
 import axios from 'axios';
 
 function App() {

@@ -1,0 +1,75 @@
+/* =====================================================================
+  -> RESET
+===================================================================== */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 100%; // 1rem = 16px
+	font-weight: normal;
+	font-style: normal;
+} //--> html
+
+/* =====================================================================
+  -> GENERAL RULES
+===================================================================== */
+body {
+	color: white;
+	background-color: black;
+} // -> body
+
+/* =====================================================================
+  -> HIDE CONTENT
+===================================================================== */
+[hidden] {
+	display: none !important;
+}
+
+/*
+ * Based on:
+ * Utility class to hide content visually while keeping it screen reader-accessible.
+ * Source: https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html
+ */
+.visually-hidden:not(:focus):not(:active) {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(0px 0px 99.9% 99.9%);
+	height: 1px;
+	overflow: hidden;
+	padding: 0 !important;
+	position: absolute !important;
+	white-space: nowrap;
+	width: 1px;
+} // -> .visually-hidden
+
+// Hide content but keep it rendered on the DOM to get dimensions with Javascript
+.get-size-hidden {
+	display: inline-block;
+	position: absolute !important;
+	visibility: hidden;
+	z-index: -1;
+	opacity: 0;
+	overflow: hidden;
+} // -> .get-size-hidden
+
+/* =====================================================================
+  -> INACTIVE CONTENT
+===================================================================== */
+.isInactive {
+	pointer-events: none;
+	cursor: default;
+}
