@@ -28,8 +28,8 @@ html {
   -> GENERAL RULES
 ===================================================================== */
 body {
-	color: white;
-	background-color: black;
+	color: var(--color__text--main);
+	background-color: var(--color__bg--main);
 } // -> body
 
 /* =====================================================================

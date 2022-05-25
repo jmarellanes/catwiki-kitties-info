@@ -1,19 +1,14 @@
-import './App.scss';
-
-import axios from 'axios';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from 'pages/Home';
 
 function App() {
-	axios({
-		method: 'get',
-		url: 'https://api.thecatapi.com/v1/favourites',
-		headers: {
-			'x-api-key': process.env.REACT_APP_API_KEY,
-		},
-	}).then(function (response) {
-		console.log(response);
-	});
-
-	return <div>I'm Alive</div>;
+	return (
+		<Router>
+			<Routes>
+				<Route path='/' element={<Home />} />
+			</Routes>
+		</Router>
+	);
 }
 
 export default App;
