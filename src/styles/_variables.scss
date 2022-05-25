@@ -1,0 +1,57 @@
+:root {
+	/* =====================================================================
+    -> COLOR PALETTE
+  ===================================================================== */
+	--color__bg--main: var(--thm__pure-white);
+	--color__bg--secd: var(--thm-light__secondary--tint-1);
+	--color__text--main: var(--thm-light__primary);
+	--color__text--alt: var(--thm__pure-black);
+	--color__text--link: var(--thm-light__primary--shade-1);
+	--color__element-1: var(--thm-light__secondary);
+	--color__element-2: var(--thm-light__primary--tint-1);
+	--color__element-3: var(--thm-light__primary--shade-2);
+	--color__element-4: var(--thm-light__complementary-1);
+
+	/* =====================================================================
+    -> MARGINS AND PADDINGS
+  ===================================================================== */
+	// Base 16
+	--spacer__4: 0.25rem;
+	--spacer__8: 0.5rem;
+	--spacer__12: 0.75rem;
+	--spacer__16: 1rem;
+	--spacer__20: 1.25rem;
+	--spacer__24: 1.5rem;
+	--spacer__32: 2rem;
+	--spacer__40: 2.5rem;
+	--spacer__48: 3rem;
+	--spacer__56: 3.5rem;
+	--spacer__64: 4rem;
+	--spacer__72: 4.5rem;
+	--spacer__80: 5rem;
+	--spacer__96: 6rem;
+	--spacer__112: 7rem;
+	--spacer__128: 8rem;
+	--spacer__160: 10rem;
+	--spacer__176: 11rem;
+	--spacer__192: 12rem;
+	--spacer__208: 13rem;
+	--spacer__256: 16rem;
+
+	/* =====================================================================
+    -> FONTS
+  ===================================================================== */
+	--font__headings: 'montserrat--bold', sans-serif;
+	--font__primary: 'montserrat--medium', sans-serif;
+	--font__semibold: 'montserrat--semibold', sans-serif;
+	--font__bold: 'montserrat--bold', sans-serif;
+
+	/* =====================================================================
+    -> MIX CSS CUSTOM PROPERTIES
+  ======================================+=============================== */
+	--rounded-corners: 0.5rem;
+	--duration__250: 250ms;
+	--duration__350: 350ms;
+	--easing__xl: cubic-bezier(0.8, 0, 0.2, 1);
+	--easing__s: cubic-bezier(0.5, 0.7, 0.4, 1);
+}
