@@ -27,3 +27,5 @@ yarn-error.log*
 
 # settings
 .vscode
+# Local Netlify folder
+.netlify
