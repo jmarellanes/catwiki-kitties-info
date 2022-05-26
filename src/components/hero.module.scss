@@ -1,0 +1,31 @@
+.hero {
+	background-image: url(../../src/assets/images/hero--lg.png);
+	background-size: cover;
+	padding-left: var(--spacer__104);
+
+	border-radius: 2.5rem 2.5rem 0 0;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		min-height: 33rem;
+	}
+
+	&__logo {
+		display: flex; // Collapse space at the bottom
+
+		width: 14rem;
+		margin-bottom: var(--spacer__8);
+
+		path {
+			fill: var(--color__text--alt-1);
+		}
+	}
+
+	&__text {
+		max-width: 23rem;
+		color: var(--color__text--alt-1);
+	}
+}
