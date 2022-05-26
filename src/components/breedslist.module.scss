@@ -1,0 +1,55 @@
+@use '../styles/abstracts';
+
+.breeds {
+	background-color: var(--color__bg--secd);
+	border-radius: 0 0 2.5rem 2.5rem;
+
+	&__container {
+		@include abstracts.ct_section-container;
+		padding-top: var(--spacer__40);
+	}
+
+	&__title {
+		&-container {
+			display: flex;
+			align-items: flex-end;
+		}
+
+		max-width: 32rem;
+	}
+
+	&__subtitle {
+		width: fit-content;
+
+		margin-bottom: var(--spacer__64);
+		text-transform: capitalize;
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -10px;
+			left: 0;
+
+			width: 60px;
+			height: 4px;
+
+			background-color: var(--color__element-2);
+			border-radius: 5px;
+		}
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+
+		width: fit-content;
+		text-transform: uppercase;
+		text-decoration: none;
+		margin-left: auto;
+
+		svg {
+			margin-left: var(--spacer__8);
+		}
+	}
+}
