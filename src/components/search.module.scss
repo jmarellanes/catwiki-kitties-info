@@ -1,0 +1,22 @@
+.search {
+	&__form {
+		position: relative;
+		width: fit-content;
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		position: absolute;
+		top: 50%;
+		right: var(--spacer__28);
+		transform: translateY(-50%);
+
+		background-color: transparent;
+		border: none;
+
+		border-radius: 1rem;
+	}
+}
