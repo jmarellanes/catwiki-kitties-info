@@ -5,6 +5,8 @@ exports.handler = async event => {
 	try {
 		const breedsRecords = await catsTable
 			.select({
+				filterByFormula: "NOT({PopularityRank} = '')",
+				sort: [{ field: 'PopularityRank' }],
 				fields: [
 					'Name',
 					'ID',
