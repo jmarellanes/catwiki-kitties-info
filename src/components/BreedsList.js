@@ -1,9 +1,14 @@
+import { useGetBreeds } from 'hooks/useGetBreeds';
+
 import { Link } from 'react-router-dom';
 import { ReactComponent as ArrowRight } from 'assets/images/icon--arrow-long.svg';
 
 import styles from './breedslist.module.scss';
 
 function BreedsList() {
+	const { data } = useGetBreeds();
+	console.log(data);
+
 	return (
 		<section className={styles.breeds}>
 			<div className={styles.breeds__container}>
