@@ -1,0 +1,25 @@
+@use '../app/abstracts' as *;
+
+.footer {
+	&__container {
+		display: flex;
+		align-items: center;
+
+		@include ct_container-size;
+		@include ct_padding-section($left-right: true);
+
+		height: 7rem;
+		background-color: var(--color__bg--ter);
+		border-radius: var(--rounded-corners) var(--rounded-corners) 0 0;
+	}
+
+	&__link {
+		svg {
+			width: 9rem;
+		}
+
+		path {
+			fill: var(--color__bg--main);
+		}
+	}
+}

@@ -6,10 +6,10 @@ import styles from 'styles/modules/header.module.scss';
 function Header() {
 	return (
 		<header className={styles.header}>
-			<h1 className='visually-hidden'>
-				CatWiki - Get to know more about your cat breed
-			</h1>
 			<div className={styles.header__container}>
+				<h1 className='visually-hidden'>
+					CatWiki - Get to know more about your cat breed
+				</h1>
 				<Link to='/' className={styles.header__link}>
 					<Logo />
 				</Link>
