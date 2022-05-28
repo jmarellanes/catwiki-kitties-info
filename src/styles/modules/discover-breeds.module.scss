@@ -1,12 +1,11 @@
-@use '../app/abstracts';
+@use '../app/abstracts' as *;
 
 .discover {
 	background-color: var(--color__bg--secd);
 	border-radius: 0 0 var(--rounded-corners) var(--rounded-corners);
 
 	&__container {
-		@include abstracts.ct_section-container;
-		padding-top: var(--spacer__40);
+		@include ct_padding-section(var(--spacer__48));
 	}
 
 	&__title {

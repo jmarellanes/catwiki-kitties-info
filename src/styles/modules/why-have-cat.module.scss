@@ -1,11 +1,11 @@
-@use '../app/abstracts';
+@use '../app/abstracts' as *;
 
 .why-have {
 	&__container {
 		display: flex;
 		gap: var(--spacer__72);
-		@include abstracts.ct_section-container;
-		padding-top: var(--spacer__104);
+
+		@include ct_padding-section(var(--spacer__104));
 	}
 
 	&__panel {

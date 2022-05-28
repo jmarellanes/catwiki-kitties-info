@@ -6,8 +6,22 @@
 	font-style: normal;
 }
 
-@mixin ct_section-container {
-	padding: 0 var(--spacer__104) var(--spacer__104);
+$p-value: var(--spacer__104);
+@mixin ct_padding-section(
+	$top: 0,
+	$left-right: $p-value,
+	$bottom: $p-value
+) {
+	@if $left-right == true {
+		padding: 0 $p-value 0;
+	} @else {
+		padding: $top $left-right $bottom;
+	}
+}
+
+@mixin ct_container-size {
+	max-width: 78rem;
+	margin: 0 auto;
 }
 
 /* =====================================================================

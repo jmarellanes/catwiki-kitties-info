@@ -1,8 +1,8 @@
+@use '../app/abstracts' as *;
+
 .hero {
 	background-image: url(../../assets/images/hero--lg.jpg);
 	background-size: cover;
-	padding-left: var(--spacer__104);
-
 	border-radius: var(--rounded-corners) var(--rounded-corners) 0 0;
 
 	&__container {
@@ -10,6 +10,7 @@
 		flex-direction: column;
 		justify-content: center;
 
+		@include ct_padding-section($left-right: true);
 		min-height: 33rem;
 	}
 

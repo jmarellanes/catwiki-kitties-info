@@ -1,7 +1,11 @@
+@use '../app/abstracts' as *;
+
 .header {
 	&__container {
 		display: flex;
 		align-items: center;
+
+		@include ct_container-size;
 		height: 6rem;
 	}
 
