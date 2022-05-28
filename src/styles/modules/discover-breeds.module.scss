@@ -1,8 +1,8 @@
-@use '../styles/abstracts';
+@use '../app/abstracts';
 
 .breeds {
 	background-color: var(--color__bg--secd);
-	border-radius: 0 0 2.5rem 2.5rem;
+	border-radius: 0 0 var(--rounded-corners) var(--rounded-corners);
 
 	&__container {
 		@include abstracts.ct_section-container;
@@ -10,12 +10,15 @@
 	}
 
 	&__title {
+		max-width: 32rem;
+		margin-right: auto;
+
 		&-container {
 			display: flex;
 			align-items: flex-end;
-		}
 
-		max-width: 32rem;
+			margin-bottom: var(--spacer__44);
+		}
 	}
 
 	&__subtitle {
@@ -39,17 +42,33 @@
 		}
 	}
 
-	&__link {
+	&__most-searched {
 		display: flex;
-		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-between;
 
-		width: fit-content;
-		text-transform: uppercase;
-		text-decoration: none;
-		margin-left: auto;
+		& article {
+			width: 14rem;
+		}
 
-		svg {
-			margin-left: var(--spacer__8);
+		& img {
+			max-width: 14rem;
+			width: 14rem;
+			height: 14rem;
+			object-fit: cover;
+
+			border-radius: var(--rounder-corners--img);
+		}
+	}
+
+	&__breed {
+		&-image {
+			display: inline-block;
+			margin-bottom: var(--spacer__16);
+		}
+
+		&-name {
+			font-family: var(--font__semibold);
 		}
 	}
 }
