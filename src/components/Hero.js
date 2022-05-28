@@ -1,6 +1,7 @@
-import { ReactComponent as Logo } from 'assets/images/catwiki--logo.svg';
-import styles from './hero.module.scss';
 import Search from './Search';
+import { ReactComponent as Logo } from 'assets/images/catwiki--logo.svg';
+
+import styles from 'styles/modules/hero.module.scss';
 
 function Hero() {
 	return (

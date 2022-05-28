@@ -1,6 +1,7 @@
-import { ReactComponent as Logo } from 'assets/images/catwiki--logo.svg';
 import { Link } from 'react-router-dom';
-import styles from './header.module.scss';
+import { ReactComponent as Logo } from 'assets/images/catwiki--logo.svg';
+
+import styles from 'styles/modules/header.module.scss';
 
 function Header() {
 	return (

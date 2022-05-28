@@ -1,5 +1,6 @@
 import { ReactComponent as SearchIcon } from 'assets/images/icon--search.svg';
-import styles from './search.module.scss';
+
+import styles from 'styles/modules/search.module.scss';
 
 function Search() {
 	const handleSubmit = e => {

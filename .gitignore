@@ -27,5 +27,9 @@ yarn-error.log*
 
 # settings
 .vscode
+
 # Local Netlify folder
 .netlify
+
+# Project Specific
+notes.txt

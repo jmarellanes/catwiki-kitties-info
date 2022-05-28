@@ -12,6 +12,7 @@ exports.handler = async event => {
 					'ID',
 					'PopularityRank',
 					'Description',
+					'Images',
 					'Temperament',
 					'Origin',
 					'LifeSpan',
