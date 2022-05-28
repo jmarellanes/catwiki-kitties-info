@@ -3,7 +3,7 @@
 	background-size: cover;
 	padding-left: var(--spacer__104);
 
-	border-radius: 2.5rem 2.5rem 0 0;
+	border-radius: var(--rounded-corners) var(--rounded-corners) 0 0;
 
 	&__container {
 		display: flex;
