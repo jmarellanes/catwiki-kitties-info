@@ -1,6 +1,8 @@
 import DiscoverBreeds from 'components/DiscoverBreeds';
 import Header from 'components/Header';
 import Hero from 'components/Hero';
+import WhyHaveCat from 'components/WhyHaveCat';
+
 import styles from './home.module.scss';
 
 function Home() {
@@ -10,6 +12,7 @@ function Home() {
 			<main>
 				<Hero />
 				<DiscoverBreeds />
+				<WhyHaveCat />
 			</main>
 			<footer className='visually-hidden'>I'm the footer</footer>
 		</div>

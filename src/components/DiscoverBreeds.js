@@ -1,6 +1,6 @@
 import { useGetBreeds } from 'hooks/useGetBreeds';
 
-import SeeMoreLink from './SeeMoreLink';
+import SectionLink from './SectionLink';
 import BreedsList from './BreedsList';
 
 import styles from 'styles/modules/discover-breeds.module.scss';
@@ -20,7 +20,7 @@ function DiscoverBreeds() {
 						66+ Breeds for you to discover
 					</h2>
 
-					<SeeMoreLink linkTo={'#0'} />
+					<SectionLink linkTo={'#0'}>Discover more breeds</SectionLink>
 				</div>
 
 				<>
