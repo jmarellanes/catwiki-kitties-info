@@ -1,6 +1,6 @@
 @use '../app/abstracts';
 
-.breeds {
+.discover {
 	background-color: var(--color__bg--secd);
 	border-radius: 0 0 var(--rounded-corners) var(--rounded-corners);
 
@@ -39,36 +39,6 @@
 
 			background-color: var(--color__element-2);
 			border-radius: 5px;
-		}
-	}
-
-	&__most-searched {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-
-		& article {
-			width: 14rem;
-		}
-
-		& img {
-			max-width: 14rem;
-			width: 14rem;
-			height: 14rem;
-			object-fit: cover;
-
-			border-radius: var(--rounder-corners--img);
-		}
-	}
-
-	&__breed {
-		&-image {
-			display: inline-block;
-			margin-bottom: var(--spacer__16);
-		}
-
-		&-name {
-			font-family: var(--font__semibold);
 		}
 	}
 }
