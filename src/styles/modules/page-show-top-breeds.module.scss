@@ -1,0 +1,11 @@
+@use '../app/abstracts' as *;
+
+#show-top__wrapper {
+	@include ct_container-size;
+}
+
+.show-top {
+	&__title {
+		margin-bottom: var(--spacer__48);
+	}
+}
