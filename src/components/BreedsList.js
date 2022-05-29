@@ -4,10 +4,10 @@ import { getRangeToShow } from '../utils/utils';
 import styles from 'styles/modules/breeds-list.module.scss';
 
 function BreedsList({ rawBreedsData, showInHome }) {
-	const { breedsList } = rawBreedsData;
+	const { breedsByName } = rawBreedsData;
 
 	const { minRange, maxRange } = getRangeToShow(showInHome);
-	const formattedBreeds = breedsList.slice(minRange, maxRange);
+	const formattedBreeds = breedsByName.slice(minRange, maxRange);
 
 	return (
 		<div className={styles['breeds-list']}>
