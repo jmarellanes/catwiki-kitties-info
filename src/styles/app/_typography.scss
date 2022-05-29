@@ -67,7 +67,8 @@ h2,
 }
 
 h3,
-.h3 {
+.h3,
+.h3--alt {
 	font-family: var(--font__semibold);
 	font-size: ct_calculate-rem(36);
 	line-height: ct_calculate-lh(44, 36);

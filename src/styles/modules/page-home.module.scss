@@ -1,0 +1,5 @@
+@use '../app/abstracts' as *;
+
+#home__wrapper {
+	@include ct_container-size;
+}

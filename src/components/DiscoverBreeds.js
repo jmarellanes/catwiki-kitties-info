@@ -12,7 +12,7 @@ function DiscoverBreeds() {
 		<section className={styles.discover}>
 			<div className={styles.discover__container}>
 				<p className={styles.discover__subtitle}>
-					Discover the right breed for you! ** Add random fn **
+					Discover the right breed for you!
 				</p>
 
 				<div className={styles['discover__title-container']}>
@@ -20,7 +20,9 @@ function DiscoverBreeds() {
 						66+ Breeds for you to discover
 					</h2>
 
-					<SectionLink linkTo={'#0'}>Discover more breeds</SectionLink>
+					<SectionLink linkTo='/all-breeds'>
+						Discover more breeds
+					</SectionLink>
 				</div>
 
 				<>

@@ -1,0 +1,11 @@
+@use '../app/abstracts' as *;
+
+#show-all__wrapper {
+	@include ct_container-size;
+}
+
+.show-all {
+	&__title {
+		margin-bottom: var(--spacer__48);
+	}
+}

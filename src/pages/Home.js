@@ -2,7 +2,7 @@ import Hero from 'components/Hero';
 import DiscoverBreeds from 'components/DiscoverBreeds';
 import WhyHaveCat from 'components/WhyHaveCat';
 
-import styles from './home.module.scss';
+import styles from 'styles/modules/page-home.module.scss';
 
 function Home() {
 	return (
