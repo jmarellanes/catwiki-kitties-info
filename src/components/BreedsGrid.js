@@ -1,17 +1,11 @@
 import { Link } from 'react-router-dom';
-import { getRangeToShow } from '../utils/utils';
 
 import styles from 'styles/modules/breeds-grid.module.scss';
 
-function BreedsGrid({ rawBreedsData, showInHome }) {
-	const { breedsByName } = rawBreedsData;
-
-	const { minRange, maxRange } = getRangeToShow(showInHome);
-	const formattedBreeds = breedsByName.slice(minRange, maxRange);
-
+function BreedsGrid({ breedsByName }) {
 	return (
 		<div className={styles['breeds-grid']}>
-			{formattedBreeds.map(breed => {
+			{breedsByName.map(breed => {
 				const br = breed.fields;
 
 				return (

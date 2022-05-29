@@ -2,11 +2,21 @@ import { useGetBreeds } from 'hooks/useGetBreeds';
 
 import SectionLink from './SectionLink';
 import BreedsGrid from './BreedsGrid';
+import { getRangeToShow } from '../utils/utils';
 
 import styles from 'styles/modules/discover-breeds.module.scss';
 
 function DiscoverBreeds() {
 	const { data, isLoading } = useGetBreeds();
+
+	const renderComponent = () => {
+		const breedsToShow = 4;
+
+		const { minRange, maxRange } = getRangeToShow(breedsToShow);
+		const formattedBreeds = data.breedsByName.slice(minRange, maxRange);
+
+		return <BreedsGrid breedsByName={formattedBreeds} />;
+	};
 
 	return (
 		<section className={styles.discover}>
@@ -25,13 +35,7 @@ function DiscoverBreeds() {
 					</SectionLink>
 				</div>
 
-				<>
-					{isLoading ? (
-						'Loading'
-					) : (
-						<BreedsGrid rawBreedsData={data} showInHome={true} />
-					)}
-				</>
+				<>{isLoading ? 'Loading' : renderComponent()}</>
 			</div>
 		</section>
 	);
