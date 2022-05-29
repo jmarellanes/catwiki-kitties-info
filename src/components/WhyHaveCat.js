@@ -22,7 +22,6 @@ function WhyHaveCat() {
 				</div>
 
 				<div className={styles['why-have__panel-images']}>
-					{console.log(IMAGES)}
 					{IMAGES.map((image, i) => (
 						<img
 							src={image.cat}
