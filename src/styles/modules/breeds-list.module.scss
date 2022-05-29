@@ -1,0 +1,27 @@
+.breeds-list {
+	&__item {
+		display: flex;
+
+		margin-bottom: var(--spacer__48);
+	}
+
+	&__image {
+		width: 11rem;
+		height: 11rem;
+		object-fit: cover;
+
+		border-radius: var(--rounder-corners--img);
+
+		&-container {
+			margin-right: var(--spacer__40);
+		}
+	}
+
+	&__name {
+		margin-bottom: var(--spacer__16);
+	}
+
+	&__description {
+		max-width: 72ch;
+	}
+}
