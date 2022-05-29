@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom';
+import { getRangeToShow } from '../utils/utils';
 
 import styles from 'styles/modules/breeds-list.module.scss';
 
-function BreedsList({ rawBreedsData, breedsToShow }) {
+function BreedsList({ rawBreedsData, showInHome }) {
 	const { breedsList } = rawBreedsData;
-	const formattedBreeds = breedsList.slice(0, breedsToShow);
+
+	const { minRange, maxRange } = getRangeToShow(showInHome);
+	const formattedBreeds = breedsList.slice(minRange, maxRange);
 
 	return (
 		<div className={styles['breeds-list']}>

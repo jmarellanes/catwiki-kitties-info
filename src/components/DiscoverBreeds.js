@@ -27,7 +27,7 @@ function DiscoverBreeds() {
 					{isLoading ? (
 						'Loading'
 					) : (
-						<BreedsList rawBreedsData={data} breedsToShow={4} />
+						<BreedsList rawBreedsData={data} showInHome={true} />
 					)}
 				</>
 			</div>
