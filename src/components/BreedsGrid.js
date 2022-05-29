@@ -1,37 +1,37 @@
 import { Link } from 'react-router-dom';
 import { getRangeToShow } from '../utils/utils';
 
-import styles from 'styles/modules/breeds-list.module.scss';
+import styles from 'styles/modules/breeds-grid.module.scss';
 
-function BreedsList({ rawBreedsData, showInHome }) {
+function BreedsGrid({ rawBreedsData, showInHome }) {
 	const { breedsByName } = rawBreedsData;
 
 	const { minRange, maxRange } = getRangeToShow(showInHome);
 	const formattedBreeds = breedsByName.slice(minRange, maxRange);
 
 	return (
-		<div className={styles['breeds-list']}>
+		<div className={styles['breeds-grid']}>
 			{formattedBreeds.map(breed => {
 				const br = breed.fields;
 
 				return (
-					<article key={br.ID} className={styles['breeds-list__item']}>
+					<article key={br.ID} className={styles['breeds-grid__item']}>
 						<h3 className='visually-hidden'>
 							Click to go to article about {br.Name} breed
 						</h3>
 
 						<Link
 							to='#0'
-							className={styles['breeds-list__image-container']}
+							className={styles['breeds-grid__image-container']}
 						>
 							<img
 								src={br.Images[1].thumbnails['large'].url}
 								alt={`${br.Name} cat breed`}
-								className={styles['breeds-list__image']}
+								className={styles['breeds-grid__image']}
 							/>
 						</Link>
 
-						<p className={styles['breeds-list__name']}>{br.Name}</p>
+						<p className={styles['breeds-grid__name']}>{br.Name}</p>
 					</article>
 				);
 			})}
@@ -39,4 +39,4 @@ function BreedsList({ rawBreedsData, showInHome }) {
 	);
 }
 
-export default BreedsList;
+export default BreedsGrid;

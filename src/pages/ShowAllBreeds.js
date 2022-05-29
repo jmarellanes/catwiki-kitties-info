@@ -1,5 +1,6 @@
-import BreedsList from 'components/BreedsList';
 import { useGetBreeds } from 'hooks/useGetBreeds';
+import BreedsGrid from 'components/BreedsGrid';
+
 import styles from 'styles/modules/page-show-all-breeds.module.scss';
 
 function ShowAllBreeds() {
@@ -10,7 +11,7 @@ function ShowAllBreeds() {
 			<h1 className={`h3--alt ${styles['show-all__title']}`}>
 				Discover your favorite breed!
 			</h1>
-			{isLoading ? 'Loading' : <BreedsList rawBreedsData={data} />}
+			{isLoading ? 'Loading' : <BreedsGrid rawBreedsData={data} />}
 		</div>
 	);
 }

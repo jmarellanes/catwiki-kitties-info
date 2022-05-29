@@ -1,7 +1,7 @@
 import { useGetBreeds } from 'hooks/useGetBreeds';
 
 import SectionLink from './SectionLink';
-import BreedsList from './BreedsList';
+import BreedsGrid from './BreedsGrid';
 
 import styles from 'styles/modules/discover-breeds.module.scss';
 
@@ -29,7 +29,7 @@ function DiscoverBreeds() {
 					{isLoading ? (
 						'Loading'
 					) : (
-						<BreedsList rawBreedsData={data} showInHome={true} />
+						<BreedsGrid rawBreedsData={data} showInHome={true} />
 					)}
 				</>
 			</div>
