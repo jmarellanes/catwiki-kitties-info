@@ -1,4 +1,3 @@
-// Net
 const { catsTable } = require('./utils/airtable');
 
 exports.handler = async event => {
