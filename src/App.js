@@ -5,6 +5,7 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 import ShowAllBreeds from 'pages/ShowAllBreeds';
 import ShowTopBreeds from 'pages/ShowTopBreeds';
+import BreedDetails from 'pages/BreedDetails';
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 					<Route path='/' element={<Home />} />
 					<Route path='/all-breeds' element={<ShowAllBreeds />} />
 					<Route path='/top-breeds' element={<ShowTopBreeds />} />
+					<Route path='/breed/:breedId' element={<BreedDetails />} />
 				</Routes>
 			</main>
 

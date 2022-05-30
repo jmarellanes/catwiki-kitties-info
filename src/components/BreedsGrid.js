@@ -15,7 +15,7 @@ function BreedsGrid({ breedsByName }) {
 						</h3>
 
 						<Link
-							to='#0'
+							to={`/breed/${br.ID}`}
 							className={styles['breeds-grid__image-container']}
 						>
 							<img
