@@ -15,7 +15,7 @@ function BreedsList({ breedsByPopularity }) {
 						</h3>
 
 						<Link
-							to='#0'
+							to={`/breed/${br.ID}`}
 							className={styles['breeds-list__image-container']}
 						>
 							<img
