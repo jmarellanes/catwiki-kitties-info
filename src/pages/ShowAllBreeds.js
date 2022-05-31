@@ -11,11 +11,14 @@ function ShowAllBreeds() {
 			<h1 className={`h3--alt ${styles['show-all__title']}`}>
 				Discover your favorite breed!
 			</h1>
-			{isLoading ? (
-				'Loading'
-			) : (
-				<BreedsGrid breedsByName={data.breedsByName} />
-			)}
+
+			<div className={styles['show-all__grid']}>
+				{isLoading ? (
+					'Loading'
+				) : (
+					<BreedsGrid breedsByName={data.breedsByName} />
+				)}
+			</div>
 		</div>
 	);
 }

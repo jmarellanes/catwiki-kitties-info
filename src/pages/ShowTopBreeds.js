@@ -19,7 +19,9 @@ function ShowTopBreeds() {
 				Top 10 popular breeds
 			</h1>
 
-			{isLoading ? 'Loading' : <BreedsListContainer />}
+			<div className={styles['show-top__grid']}>
+				{isLoading ? 'Loading' : <BreedsListContainer />}
+			</div>
 		</div>
 	);
 }

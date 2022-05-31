@@ -2,7 +2,9 @@
 	&__item {
 		display: flex;
 
-		margin-bottom: var(--spacer__48);
+		&:not(:last-of-type) {
+			margin-bottom: var(--spacer__48);
+		}
 	}
 
 	&__image {
