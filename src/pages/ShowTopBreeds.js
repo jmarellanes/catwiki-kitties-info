@@ -6,7 +6,7 @@ import styles from 'styles/modules/page-show-top-breeds.module.scss';
 function ShowTopBreeds() {
 	const { data, isLoading } = useGetBreeds();
 
-	const renderComponent = () => {
+	const BreedsListContainer = () => {
 		const breedsToShow = 10;
 		const formattedBreeds = data.breedsByPopularity.slice(0, breedsToShow);
 
@@ -19,7 +19,7 @@ function ShowTopBreeds() {
 				Top 10 popular breeds
 			</h1>
 
-			{isLoading ? 'Loading' : renderComponent()}
+			{isLoading ? 'Loading' : <BreedsListContainer />}
 		</div>
 	);
 }
