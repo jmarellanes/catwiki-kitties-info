@@ -9,7 +9,7 @@ import styles from 'styles/modules/discover-breeds.module.scss';
 function DiscoverBreeds() {
 	const { data, isLoading } = useGetBreeds();
 
-	const renderComponent = () => {
+	const BreedsGridContainer = () => {
 		const breedsToShow = 4;
 
 		const { minRange, maxRange } = getRangeToShow(breedsToShow);
@@ -35,7 +35,7 @@ function DiscoverBreeds() {
 					</SectionLink>
 				</div>
 
-				<>{isLoading ? 'Loading' : renderComponent()}</>
+				<>{isLoading ? 'Loading' : <BreedsGridContainer />}</>
 			</div>
 		</section>
 	);
