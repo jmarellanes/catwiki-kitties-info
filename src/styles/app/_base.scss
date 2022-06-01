@@ -32,6 +32,21 @@ body {
 	background-color: var(--color__bg--main);
 } // -> body
 
+// Sticky footer
+#root {
+	display: flex;
+	flex-direction: column;
+
+	height: 100%;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+footer {
+	flex-shrink: 0;
+}
 /* =====================================================================
   -> HIDE CONTENT
 ===================================================================== */
