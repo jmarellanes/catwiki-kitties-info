@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import styles from 'styles/modules/breeds-grid.module.scss';
 
-function BreedsGrid({ breedsByName }) {
+function BreedsGrid({ breedsByName, isInHome }) {
 	return (
 		<div className={styles['breeds-grid']}>
 			{breedsByName.map(breed => {
@@ -16,7 +16,9 @@ function BreedsGrid({ breedsByName }) {
 
 						<Link
 							to={`/breed/${br.ID}`}
-							className={styles['breeds-grid__image-container']}
+							className={`${styles['breeds-grid__image-container']} ${
+								isInHome ? styles['breeds-grid__image-show-bar'] : ''
+							}`}
 						>
 							<img
 								src={br.Images[1].thumbnails['large'].url}

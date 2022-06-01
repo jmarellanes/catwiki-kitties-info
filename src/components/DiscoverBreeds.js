@@ -15,7 +15,7 @@ function DiscoverBreeds() {
 		const { minRange, maxRange } = getRandomRangeToShow(breedsToShow);
 		const formattedBreeds = data.breedsByName.slice(minRange, maxRange);
 
-		return <BreedsGrid breedsByName={formattedBreeds} />;
+		return <BreedsGrid breedsByName={formattedBreeds} isInHome />;
 	};
 
 	return (

@@ -1,3 +1,5 @@
+@use '../app/abstracts' as *;
+
 .info {
 	margin-bottom: var(--spacer__72);
 
@@ -22,19 +24,7 @@
 			border-radius: var(--rounder-corners--img);
 		}
 
-		&::after {
-			content: '';
-			position: absolute;
-			top: 50%;
-			left: -1rem;
-			z-index: -1;
-			transform: translateY(-50%);
-
-			height: 19rem;
-			width: 4rem;
-			border-radius: var(--rounder-corners--img);
-			background-color: var(--color__element-1);
-		}
+		@include ct_bar-left-image;
 	}
 
 	&__details {

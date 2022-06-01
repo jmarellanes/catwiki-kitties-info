@@ -1,7 +1,16 @@
+@use '../app/abstracts' as *;
+
 .breeds-grid {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: var(--spacer__44);
+
+	& > :first-child {
+		.breeds-grid__image-show-bar {
+			@include ct_bar-left-image;
+			z-index: 0;
+		}
+	}
 
 	&__image {
 		width: 100%;
@@ -9,10 +18,13 @@
 		object-fit: cover;
 		border-radius: var(--rounder-corners--img);
 
+		z-index: 1;
+
 		&-container {
 			display: flex;
 			aspect-ratio: 1 / 1;
 
+			position: relative;
 			margin-bottom: var(--spacer__12);
 		}
 	}
