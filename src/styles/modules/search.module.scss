@@ -1,7 +1,30 @@
 .search {
 	&__form {
 		position: relative;
+		z-index: 10;
+
 		width: fit-content;
+	}
+
+	&__field {
+		// Fallback for Safari &:active,
+		&:focus {
+			outline: 4px dotted var(--color__bg--main);
+			outline-offset: 4px;
+		}
+
+		// HACK for use @supports selector() with SASS
+		@supports #{'\selector(*:focus-visible)'} {
+			&:focus {
+				outline: none;
+			}
+
+			&:active,
+			&:focus-visible {
+				outline: 4px dotted var(--color__bg--main);
+				outline-offset: 4px;
+			}
+		}
 	}
 
 	&__button {
@@ -18,5 +41,119 @@
 		border: none;
 
 		border-radius: 1rem;
+
+		// Fallback for Safari
+		&:active,
+		&:focus {
+			outline: 4px dotted var(--color__text--main);
+			outline-offset: 5px;
+		}
+
+		// HACK for use @supports selector() with SASS
+		@supports #{'\selector(*:focus-visible)'} {
+			&:focus {
+				outline: none;
+			}
+
+			&:active,
+			&:focus-visible {
+				outline: 4px dotted var(--color__text--main);
+				outline-offset: 5px;
+			}
+		}
+	}
+
+	&__container {
+		position: absolute;
+		top: 5.25rem;
+		left: 0;
+
+		width: 24rem;
+		height: fit-content;
+
+		background-color: var(--color__bg--main);
+		border-radius: var(--rounder-corners--img);
+	}
+
+	&__element {
+		width: 22rem;
+		max-height: 13.5rem;
+
+		margin: 1rem;
+		line-height: 3rem;
+		background-color: var(--color__bg--main);
+		overflow: auto;
+
+		list-style: none;
+
+		// Fallback for Safari
+
+		&:focus {
+			outline: 4px dotted var(--color__text--main);
+			outline-offset: -4px;
+		}
+
+		&:active {
+			outline: none;
+		}
+
+		// HACK for use @supports selector() with SASS
+		@supports #{'\selector(*:focus-visible)'} {
+			&:focus {
+				outline: none;
+			}
+
+			&:focus-visible {
+				outline: 4px dotted var(--color__text--main);
+				outline-offset: -4px;
+				border-radius: var(--rounder-corners--img);
+			}
+		}
+	}
+
+	&__item {
+		width: 97%;
+
+		&:not(:last-child) {
+			margin-bottom: var(--spacer__4);
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		width: 100%;
+
+		padding-left: 1rem;
+
+		color: var(--color__text--main);
+		font-family: var(--font__primary);
+		text-decoration: none;
+		border-radius: 12px;
+
+		transition: background-color var(--duration__250) var(--easing__s);
+
+		&:hover {
+			background-color: var(--color__element-6);
+		}
+
+		// Fallback for Safari
+		&:active,
+		&:focus {
+			outline: 4px dotted var(--color__text--main);
+			outline-offset: -4px;
+		}
+
+		// HACK for use @supports selector() with SASS
+		@supports #{'\selector(*:focus-visible)'} {
+			&:focus {
+				outline: none;
+			}
+
+			&:active,
+			&:focus-visible {
+				outline: 4px dotted var(--color__text--main);
+				outline-offset: -4px;
+			}
+		}
 	}
 }

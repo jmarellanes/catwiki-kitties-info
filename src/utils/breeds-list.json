@@ -1,0 +1,23 @@
+[
+	{ "ID": "abys", "Name": "Abyssinian" },
+	{ "ID": "asho", "Name": "American Shorthair" },
+	{ "ID": "beng", "Name": "Bengal" },
+	{ "ID": "birm", "Name": "Birman" },
+	{ "ID": "bsho", "Name": "British Shorthair" },
+	{ "ID": "bure", "Name": "Burmese" },
+	{ "ID": "crex", "Name": "Cornish Rex" },
+	{ "ID": "drex", "Name": "Devon Rex" },
+	{ "ID": "esho", "Name": "Exotic Shorthair" },
+	{ "ID": "hima", "Name": "Himalayan" },
+	{ "ID": "mcoo", "Name": "Maine Coon" },
+	{ "ID": "norw", "Name": "Norwegian Forest Cat" },
+	{ "ID": "ocic", "Name": "Ocicat" },
+	{ "ID": "pers", "Name": "Persian" },
+	{ "ID": "ragd", "Name": "Ragdoll" },
+	{ "ID": "rblu", "Name": "Russian Blue" },
+	{ "ID": "sfol", "Name": "Scottish Fold" },
+	{ "ID": "siam", "Name": "Siamese" },
+	{ "ID": "sibe", "Name": "Siberian" },
+	{ "ID": "sphy", "Name": "Sphynx" },
+	{ "ID": "tonk", "Name": "Tonkinese" }
+]

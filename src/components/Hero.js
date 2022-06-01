@@ -1,5 +1,6 @@
 import Search from './Search';
 import { ReactComponent as Logo } from 'assets/images/catwiki--logo.svg';
+import Data from 'utils/breeds-list.json';
 
 import styles from 'styles/modules/hero.module.scss';
 
@@ -15,7 +16,7 @@ function Hero() {
 					Get to know more about your cat breed
 				</p>
 
-				<Search />
+				<Search breedsList={Data} />
 			</div>
 		</section>
 	);
