@@ -1,3 +1,5 @@
+@use '../app/abstracts' as *;
+
 .search {
 	&__form {
 		position: relative;
@@ -7,24 +9,7 @@
 	}
 
 	&__field {
-		// Fallback for Safari &:active,
-		&:focus {
-			outline: 4px dotted var(--color__bg--main);
-			outline-offset: 4px;
-		}
-
-		// HACK for use @supports selector() with SASS
-		@supports #{'\selector(*:focus-visible)'} {
-			&:focus {
-				outline: none;
-			}
-
-			&:active,
-			&:focus-visible {
-				outline: 4px dotted var(--color__bg--main);
-				outline-offset: 4px;
-			}
-		}
+		@include ct_focus-style($color: var(--color__bg--main));
 	}
 
 	&__button {
@@ -42,25 +27,7 @@
 
 		border-radius: 1rem;
 
-		// Fallback for Safari
-		&:active,
-		&:focus {
-			outline: 4px dotted var(--color__text--main);
-			outline-offset: 5px;
-		}
-
-		// HACK for use @supports selector() with SASS
-		@supports #{'\selector(*:focus-visible)'} {
-			&:focus {
-				outline: none;
-			}
-
-			&:active,
-			&:focus-visible {
-				outline: 4px dotted var(--color__text--main);
-				outline-offset: 5px;
-			}
-		}
+		@include ct_focus-style($offset: 5px);
 	}
 
 	&__container {
@@ -87,7 +54,6 @@
 		list-style: none;
 
 		// Fallback for Safari
-
 		&:focus {
 			outline: 4px dotted var(--color__text--main);
 			outline-offset: -4px;
@@ -135,6 +101,8 @@
 		&:hover {
 			background-color: var(--color__element-6);
 		}
+
+		// @include ct_focus-style($offset: px);
 
 		// Fallback for Safari
 		&:active,

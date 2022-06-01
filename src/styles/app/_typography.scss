@@ -36,6 +36,8 @@ body {
 a {
 	font-family: var(--font__bold);
 	color: var(--color__text--link);
+
+	@include ct_focus-style($offset: 8px);
 }
 
 /* =====================================================================

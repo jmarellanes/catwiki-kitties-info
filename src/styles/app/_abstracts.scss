@@ -24,6 +24,35 @@ $p-value: var(--spacer__104);
 	margin: 0 auto;
 }
 
+@mixin ct_focus-style(
+	$size: 4px,
+	$offset: 4px,
+	$color: var(--color__text--main)
+) {
+	outline: $size dotted transparent;
+	outline-offset: $offset;
+	transition: all var(--duration__350) var(--easing__s);
+	transition-property: outline, outline-offset;
+
+	// Fallback for Safari &:active,
+	&:focus {
+		outline: $size dotted $color;
+		outline-offset: $offset;
+	}
+
+	// HACK for use @supports selector() with SASS
+	@supports #{'\selector(*:focus-visible)'} {
+		&:focus {
+			outline: none;
+		}
+
+		&:focus-visible {
+			outline: $size dotted $color;
+			outline-offset: $offset;
+		}
+	}
+}
+
 /* =====================================================================
   -> FUNCTIONS
 ===================================================================== */

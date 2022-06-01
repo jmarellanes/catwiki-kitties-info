@@ -10,8 +10,11 @@
 	}
 
 	&__link {
+		display: flex;
+
 		svg {
 			width: 9rem;
+			height: auto;
 		}
 	}
 }

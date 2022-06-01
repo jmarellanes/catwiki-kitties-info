@@ -1,4 +1,4 @@
-export function getRangeToShow(breedsToShow) {
+export function getRandomRangeToShow(breedsToShow) {
 	const BREEDS = { TOTAL: 21 };
 	const numberOfBreeds = BREEDS.TOTAL - breedsToShow;
 

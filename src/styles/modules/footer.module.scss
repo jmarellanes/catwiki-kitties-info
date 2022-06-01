@@ -14,8 +14,13 @@
 	}
 
 	&__link {
+		display: flex;
+
+		@include ct_focus-style($offset: 8px, $color: var(--color__bg--main));
+
 		svg {
 			width: 9rem;
+			height: auto;
 		}
 
 		path {

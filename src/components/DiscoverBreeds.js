@@ -2,7 +2,7 @@ import { useGetBreeds } from 'hooks/useGetBreeds';
 
 import SectionLink from './SectionLink';
 import BreedsGrid from './BreedsGrid';
-import { getRangeToShow } from '../utils/utils';
+import { getRandomRangeToShow } from '../utils/utils';
 
 import styles from 'styles/modules/discover-breeds.module.scss';
 
@@ -12,7 +12,7 @@ function DiscoverBreeds() {
 	const BreedsGridContainer = () => {
 		const breedsToShow = 4;
 
-		const { minRange, maxRange } = getRangeToShow(breedsToShow);
+		const { minRange, maxRange } = getRandomRangeToShow(breedsToShow);
 		const formattedBreeds = data.breedsByName.slice(minRange, maxRange);
 
 		return <BreedsGrid breedsByName={formattedBreeds} />;
