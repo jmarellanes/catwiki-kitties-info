@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ScrollToTop from 'utils/ScrollToTop';
 
 import Home from 'pages/Home';
 import Header from 'components/Header';
@@ -10,6 +11,7 @@ import BreedDetails from 'pages/BreedDetails';
 function App() {
 	return (
 		<Router>
+			<ScrollToTop />
 			<Header />
 
 			<main>
