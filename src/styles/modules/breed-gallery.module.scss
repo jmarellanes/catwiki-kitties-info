@@ -1,0 +1,25 @@
+.gallery {
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: var(--spacer__44);
+
+		margin-bottom: var(--spacer__72);
+	}
+
+	&__title {
+		margin-bottom: var(--spacer__44);
+	}
+
+	&__image {
+		display: flex;
+		aspect-ratio: 1 / 1;
+	}
+
+	& img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: var(--rounder-corners--img);
+	}
+}

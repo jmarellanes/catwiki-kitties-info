@@ -1,4 +1,4 @@
-import styles from 'styles/modules/page-breed-details.module.scss';
+import styles from 'styles/modules/breed-info.module.scss';
 
 function BreedRatings({ children, value }) {
 	return (
