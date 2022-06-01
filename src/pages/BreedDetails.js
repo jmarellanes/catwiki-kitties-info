@@ -15,8 +15,11 @@ function BreedDetails() {
 				'Loading'
 			) : (
 				<>
-					<BreedInfo data={data} />
-					<BreedGallery data={data} />
+					<BreedInfo
+						breedDetails={data.breedDetails}
+						breedAttributes={data.breedAttributes}
+					/>
+					<BreedGallery breedDetails={data.breedDetails.Images} />
 				</>
 			)}
 		</div>

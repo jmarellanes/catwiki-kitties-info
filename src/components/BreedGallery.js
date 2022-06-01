@@ -1,8 +1,8 @@
 import styles from 'styles/modules/breed-gallery.module.scss';
 
-function BreedGallery({ data }) {
+function BreedGallery({ breedDetails }) {
 	const BreedGallerySection = () => {
-		const formattedBreedDetails = data.breedDetails.Images.slice(1, 9);
+		const formattedBreedDetails = breedDetails.slice(1, 9);
 
 		return formattedBreedDetails.map(image => (
 			<div className={styles['gallery__image']} key={image.id}>
