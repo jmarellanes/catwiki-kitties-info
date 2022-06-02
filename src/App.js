@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {
+	BrowserRouter as Router,
+	Route,
+	Routes,
+	Navigate,
+} from 'react-router-dom';
 import ScrollToTop from 'utils/ScrollToTop';
 
 import Home from 'pages/Home';
@@ -20,6 +25,7 @@ function App() {
 					<Route path='/all-breeds' element={<ShowAllBreeds />} />
 					<Route path='/top-breeds' element={<ShowTopBreeds />} />
 					<Route path='/breed/:breedId' element={<BreedDetails />} />
+					<Route path='*' element={<Navigate to='/' replace />} />
 				</Routes>
 			</main>
 
