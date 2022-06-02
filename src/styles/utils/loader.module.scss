@@ -48,6 +48,18 @@
 			left: 3.5em;
 		}
 	}
+
+	&__content {
+		margin-top: var(--spacer__40);
+		text-align: center;
+
+		visibility: visible;
+		opacity: 1;
+		transform: translateY(0);
+
+		transition: all var(--duration__350) var(--easing__s);
+		transition-property: opacity, transform;
+	}
 }
 
 @keyframes dots {

@@ -1,10 +1,28 @@
 import { useGetBreeds } from 'hooks/useGetBreeds';
 import BreedsGrid from 'components/BreedsGrid';
+import Loader from 'utils/Loader';
+import { ErrorGeneral } from 'utils/ErrorMessages';
 
 import styles from 'styles/modules/page-show-all-breeds.module.scss';
 
 function ShowAllBreeds() {
-	const { data, isLoading } = useGetBreeds();
+	const { data, isLoading, isError } = useGetBreeds();
+
+	if (isLoading) {
+		return (
+			<div id={styles['show-all__wrapper']}>
+				<Loader />
+			</div>
+		);
+	}
+
+	if (isError) {
+		return (
+			<div id={styles['show-all__wrapper']}>
+				<ErrorGeneral />
+			</div>
+		);
+	}
 
 	return (
 		<div id={styles['show-all__wrapper']}>
@@ -13,11 +31,7 @@ function ShowAllBreeds() {
 			</h1>
 
 			<div className={styles['show-all__grid']}>
-				{isLoading ? (
-					'Loading'
-				) : (
-					<BreedsGrid breedsByName={data.breedsByName} />
-				)}
+				{<BreedsGrid breedsByName={data.breedsByName} />}
 			</div>
 		</div>
 	);

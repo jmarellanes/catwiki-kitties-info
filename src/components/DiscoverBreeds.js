@@ -3,11 +3,13 @@ import { useGetBreeds } from 'hooks/useGetBreeds';
 import SectionLink from './SectionLink';
 import BreedsGrid from './BreedsGrid';
 import { getRandomRangeToShow } from '../utils/utils';
+import Loader from 'utils/Loader';
+import { ErrorGeneral } from 'utils/ErrorMessages';
 
 import styles from 'styles/modules/discover-breeds.module.scss';
 
 function DiscoverBreeds() {
-	const { data, isLoading } = useGetBreeds();
+	const { data, isLoading, isError } = useGetBreeds();
 
 	const BreedsGridContainer = () => {
 		const breedsToShow = 4;
@@ -16,6 +18,13 @@ function DiscoverBreeds() {
 		const formattedBreeds = data.breedsByName.slice(minRange, maxRange);
 
 		return <BreedsGrid breedsByName={formattedBreeds} isInHome />;
+	};
+
+	const RenderContent = () => {
+		if (isLoading) return <Loader />;
+		if (isError) return <ErrorGeneral />;
+
+		return <BreedsGridContainer />;
 	};
 
 	return (
@@ -35,7 +44,7 @@ function DiscoverBreeds() {
 					</SectionLink>
 				</div>
 
-				<>{isLoading ? 'Loading' : <BreedsGridContainer />}</>
+				{<RenderContent />}
 			</div>
 		</section>
 	);
