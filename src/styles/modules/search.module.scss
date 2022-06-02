@@ -46,7 +46,7 @@
 		width: 22rem;
 		max-height: 13.5rem;
 
-		margin: 1rem;
+		margin: var(--spacer__16);
 		line-height: 3rem;
 		background-color: var(--color__bg--main);
 		overflow: auto;
@@ -89,7 +89,7 @@
 		display: inline-block;
 		width: 100%;
 
-		padding-left: 1rem;
+		padding-left: var(--spacer__16);
 
 		color: var(--color__text--main);
 		font-family: var(--font__primary);
