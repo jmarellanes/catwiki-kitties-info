@@ -1,3 +1,5 @@
+@use '../app/abstracts' as *;
+
 .gallery {
 	&__container {
 		display: grid;
@@ -21,5 +23,37 @@
 		height: 100%;
 		object-fit: cover;
 		border-radius: var(--rounder-corners--img);
+	}
+}
+
+@include respond-to('medium--m') {
+	.gallery {
+		&__container {
+			gap: var(--spacer__32);
+		}
+	}
+}
+
+@include respond-to('medium--s') {
+	.gallery {
+		&__container {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+}
+
+@include respond-to('medium--xs') {
+	.gallery {
+		&__container {
+			gap: var(--spacer__24);
+		}
+	}
+}
+
+@include respond-to('small--l') {
+	.gallery {
+		&__container {
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 }

@@ -44,10 +44,6 @@
 	@include respond-to('large--s') {
 		margin: 0 var(--spacer__24);
 	}
-
-	@include respond-to('medium--xs') {
-		margin: 0 var(--spacer__16);
-	}
 }
 
 @mixin ct_focus-style(
