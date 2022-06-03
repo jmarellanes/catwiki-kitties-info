@@ -41,3 +41,39 @@
 		}
 	}
 }
+
+@include respond-to('medium--m') {
+	.discover {
+		&__title {
+			max-width: 100%;
+			margin-right: initial;
+			margin-bottom: var(--spacer__8);
+
+			&-container {
+				display: block;
+
+				margin-bottom: var(--spacer__40);
+			}
+		}
+
+		&__subtitle {
+			margin-bottom: var(--spacer__40);
+		}
+	}
+}
+
+@include respond-to('medium--s') {
+	:global .discover__breeds-to-show {
+		& article:last-child {
+			display: none;
+		}
+	}
+}
+
+@include respond-to('medium--xs') {
+	:global .discover__breeds-to-show {
+		& article:last-child {
+			display: unset;
+		}
+	}
+}

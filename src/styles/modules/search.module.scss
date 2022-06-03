@@ -31,11 +31,13 @@
 	}
 
 	&__container {
+		--results-width: 24rem;
+
 		position: absolute;
 		top: 5.25rem;
 		left: 0;
 
-		width: 24rem;
+		width: var(--results-width);
 		height: fit-content;
 
 		background-color: var(--color__bg--main);
@@ -43,7 +45,7 @@
 	}
 
 	&__element {
-		width: 22rem;
+		width: calc(var(--results-width) - 2rem);
 		max-height: 13.5rem;
 
 		margin: var(--spacer__16);
@@ -123,6 +125,26 @@
 				outline: 4px dotted var(--color__text--main);
 				outline-offset: -4px;
 			}
+		}
+	}
+}
+
+@include respond-to('medium--s') {
+	.search {
+		&__container {
+			--results-width: 20rem;
+		}
+	}
+}
+
+@include respond-to('small--l') {
+	.search {
+		&__form {
+			width: 100%;
+		}
+
+		&__container {
+			--results-width: 100%;
 		}
 	}
 }

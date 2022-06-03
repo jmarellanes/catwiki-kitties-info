@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 /* =====================================================================
   -> MIXINS
 ===================================================================== */
@@ -6,14 +8,30 @@
 	font-style: normal;
 }
 
-$p-value: var(--spacer__104);
 @mixin ct_padding-section(
-	$top: 0,
-	$left-right: $p-value,
-	$bottom: $p-value
+	$top: var(--padding-value),
+	$left-right: var(--padding-value),
+	$bottom: var(--padding-value)
 ) {
+	--padding-value: var(--spacer__104);
+	@include respond-to('large--s') {
+		--padding-value: var(--spacer__72);
+	}
+	@include respond-to('medium--l') {
+		--padding-value: var(--spacer__56);
+	}
+	@include respond-to('medium--s') {
+		--padding-value: var(--spacer__44);
+	}
+	@include respond-to('medium--xs') {
+		--padding-value: var(--spacer__32);
+	}
+	@include respond-to('small--m') {
+		--padding-value: var(--spacer__20);
+	}
+
 	@if $left-right == true {
-		padding: 0 $p-value 0;
+		padding: 0 var(--padding-value) 0;
 	} @else {
 		padding: $top $left-right $bottom;
 	}
@@ -22,6 +40,14 @@ $p-value: var(--spacer__104);
 @mixin ct_container-size {
 	max-width: 78rem;
 	margin: 0 auto;
+
+	@include respond-to('large--s') {
+		margin: 0 var(--spacer__24);
+	}
+
+	@include respond-to('medium--xs') {
+		margin: 0 var(--spacer__16);
+	}
 }
 
 @mixin ct_focus-style(

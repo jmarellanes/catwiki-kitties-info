@@ -33,3 +33,23 @@
 		font-family: var(--font__semibold);
 	}
 }
+
+@include respond-to('medium--l') {
+	.breeds-grid {
+		gap: var(--spacer__32);
+	}
+}
+
+@include respond-to('medium--s') {
+	.breeds-grid {
+		grid-template-columns: repeat(3, 1fr);
+		gap: var(--spacer__24);
+	}
+}
+
+@include respond-to('medium--xs') {
+	.breeds-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--spacer__24);
+	}
+}

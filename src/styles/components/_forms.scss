@@ -1,3 +1,5 @@
+@use '../app/abstracts' as *;
+
 // FORM RESET
 .form {
 	&__field {
@@ -31,6 +33,22 @@
 
 		&::placeholder {
 			opacity: 1;
+		}
+	}
+}
+
+@include respond-to('medium--s') {
+	.form {
+		&__field {
+			width: 20rem;
+		}
+	}
+}
+
+@include respond-to('small--l') {
+	.form {
+		&__field {
+			width: 100%;
 		}
 	}
 }

@@ -79,3 +79,32 @@ h3,
 .h3--alt {
 	font-family: var(--font__bold);
 }
+
+@include respond-to('small--l') {
+	h1,
+	.h1 {
+		font-size: ct_calculate-rem(22);
+		line-height: ct_calculate-lh(28, 22);
+	}
+
+	h2,
+	.h2 {
+		font-size: ct_calculate-rem(40);
+		line-height: ct_calculate-lh(46, 40);
+	}
+
+	h3,
+	.h3,
+	.h3--alt {
+		font-size: ct_calculate-rem(30);
+		line-height: ct_calculate-lh(38, 30);
+	}
+}
+
+@include respond-to('small--l') {
+	h2,
+	.h2 {
+		font-size: ct_calculate-rem(28);
+		line-height: ct_calculate-lh(36, 28);
+	}
+}

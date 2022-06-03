@@ -28,10 +28,10 @@ function DiscoverBreeds() {
 	};
 
 	return (
-		<section className={styles.discover}>
+		<section className={`${styles.discover} discover__breeds-to-show`}>
 			<div className={styles.discover__container}>
 				<p className={styles.discover__subtitle}>
-					Discover the right breed for you!
+					Discover the breed for you!
 				</p>
 
 				<div className={styles['discover__title-container']}>

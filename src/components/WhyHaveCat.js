@@ -18,9 +18,11 @@ function WhyHaveCat() {
 						anxiety levels
 					</p>
 
-					<SectionLink linkTo='/top-breeds'>
-						top 10 popular breeds
-					</SectionLink>
+					<div className={styles['why-have__link']}>
+						<SectionLink linkTo='/top-breeds'>
+							top 10 popular breeds
+						</SectionLink>
+					</div>
 				</div>
 
 				<div className={styles['why-have__panel-images']}>

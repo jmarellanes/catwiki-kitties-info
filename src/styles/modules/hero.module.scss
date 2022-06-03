@@ -3,6 +3,7 @@
 .hero {
 	background-image: url(../../assets/images/hero--lg.jpg);
 	background-size: cover;
+	background-position: 90% 50%;
 	border-radius: var(--rounded-corners) var(--rounded-corners) 0 0;
 
 	&__container {
@@ -10,8 +11,8 @@
 		flex-direction: column;
 		justify-content: center;
 
+		height: 33rem;
 		@include ct_padding-section($left-right: true);
-		min-height: 33rem;
 	}
 
 	&__logo {
@@ -29,5 +30,65 @@
 		color: var(--color__text--alt-1);
 
 		margin-bottom: var(--spacer__48);
+	}
+}
+
+@include respond-to('medium--l') {
+	.hero {
+		&__container {
+			height: 26rem;
+		}
+	}
+}
+
+@include respond-to('medium--s') {
+	.hero {
+		&__container {
+			height: 22rem;
+		}
+
+		&__text {
+			max-width: 18rem;
+			margin-bottom: var(--spacer__32);
+		}
+
+		&__logo {
+			display: none;
+		}
+	}
+}
+
+@include respond-to('medium--xs') {
+	.hero {
+		&__container {
+			height: 18rem;
+		}
+
+		&__text {
+			max-width: 18rem;
+			margin-bottom: var(--spacer__24);
+		}
+
+		&__logo {
+			display: none;
+		}
+	}
+}
+
+@include respond-to('small--l') {
+	.hero {
+		&__text {
+			max-width: 75%;
+			margin: 0 auto var(--spacer__24);
+			text-align: center;
+		}
+	}
+}
+
+@include respond-to('small--m') {
+	.hero {
+		&__text {
+			max-width: 90%;
+		}
 	}
 }
