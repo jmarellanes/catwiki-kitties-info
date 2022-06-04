@@ -7,7 +7,11 @@ function Footer() {
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.footer__container}>
-				<Link to='/' className={styles.footer__link}>
+				<Link
+					to='/'
+					className={styles.footer__link}
+					aria-label='CatWiki Logo - Go to homepage'
+				>
 					<Logo />
 				</Link>
 			</div>

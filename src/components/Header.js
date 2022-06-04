@@ -31,7 +31,11 @@ function Header() {
 			<div className={styles.header__container}>
 				<h1 className='visually-hidden'>{renderHeader()}</h1>
 
-				<Link to='/' className={styles.header__link}>
+				<Link
+					to='/'
+					className={styles.header__link}
+					aria-label='CatWiki Logo - Go to homepage'
+				>
 					<Logo />
 				</Link>
 			</div>
