@@ -5,7 +5,7 @@
 		display: flex;
 		gap: var(--spacer__72);
 
-		@include ct_padding-section;
+		@include ct_padding-section($bottom: 0);
 	}
 
 	&__panel {
@@ -88,7 +88,6 @@
 	.why-have {
 		&__container {
 			display: block;
-			@include ct_padding-section(var(--spacer__48));
 
 			text-align: center;
 		}

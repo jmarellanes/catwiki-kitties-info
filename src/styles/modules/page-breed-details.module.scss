@@ -1,5 +1,10 @@
 @use '../app/abstracts' as *;
 
 #breed-details__wrapper {
-	@include ct_container-size;
+	--margin-bottom: var(--spacer__92);
+	@include ct_container-size($margin-bottom: var(--margin-bottom));
+
+	@include respond-to('small--l') {
+		--margin-bottom: var(--spacer__52);
+	}
 }
