@@ -4,7 +4,6 @@ exports.handler = async event => {
 	try {
 		const getByPopularity = catsTable
 			.select({
-				filterByFormula: "NOT({PopularityRank} = '')",
 				sort: [{ field: 'PopularityRank' }],
 				fields: ['Name', 'ID', 'PopularityRank', 'Description', 'Images'],
 			})
@@ -12,7 +11,6 @@ exports.handler = async event => {
 
 		const getByName = catsTable
 			.select({
-				filterByFormula: "NOT({PopularityRank} = '')",
 				sort: [{ field: 'Name' }],
 				fields: ['Name', 'ID', 'PopularityRank', 'Description', 'Images'],
 			})
