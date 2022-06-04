@@ -13,7 +13,7 @@ function BreedGallery({ breedDetails }) {
 
 	return (
 		<section className={styles['gallery']}>
-			<h3 className={styles['gallery__title']}>Other Photos</h3>
+			<h2 className={`${styles['gallery__title']} h3`}>Other Photos</h2>
 			<div className={styles['gallery__container']}>
 				{<BreedGallerySection />}
 			</div>

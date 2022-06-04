@@ -33,9 +33,9 @@ function ShowTopBreeds() {
 
 	return (
 		<div id={styles['show-top__wrapper']}>
-			<h1 className={`h3--alt ${styles['show-top__title']}`}>
+			<h2 className={`h3--alt ${styles['show-top__title']}`}>
 				Top 10 popular breeds
-			</h1>
+			</h2>
 
 			<div className={styles['show-top__grid']}>
 				{<BreedsListContainer />}

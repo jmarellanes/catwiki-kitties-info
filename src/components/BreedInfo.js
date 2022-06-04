@@ -20,9 +20,9 @@ function BreedInfo({ breedDetails, breedAttributes }) {
 				</div>
 
 				<div className={styles['info__details']}>
-					<h1 className={`${styles['info__title']} h3`}>
+					<h2 className={`${styles['info__title']} h3`}>
 						{breedDetails['Name']}
-					</h1>
+					</h2>
 
 					<p className={styles['info__description']}>
 						{breedDetails['Description']}

@@ -12,9 +12,9 @@ function Hero() {
 					<Logo />
 				</div>
 
-				<p className={`${styles.hero__text} h1`}>
+				<h2 className={`${styles.hero__text} h1`}>
 					Get to know more about your cat breed
-				</p>
+				</h2>
 
 				<Search breedsList={Data} />
 			</div>
