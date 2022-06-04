@@ -7,8 +7,13 @@
 
 	& > :first-child {
 		.breeds-grid__image-show-bar {
-			@include ct_bar-left-image;
+			--left: -0.8rem;
+			@include ct_bar-left-image($left: var(--left));
 			z-index: 0;
+
+			@include respond-to('small--l') {
+				--left: -0.6rem;
+			}
 		}
 	}
 

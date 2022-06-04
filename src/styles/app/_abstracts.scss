@@ -82,12 +82,12 @@
 	}
 }
 
-@mixin ct_bar-left-image {
+@mixin ct_bar-left-image($left: -1rem) {
 	&::after {
 		content: '';
 		position: absolute;
 		top: 50%;
-		left: -1rem;
+		left: $left;
 		z-index: -1;
 		transform: translateY(-50%);
 
